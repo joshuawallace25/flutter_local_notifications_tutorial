@@ -20,7 +20,7 @@ class LocalNotifications {
         AndroidInitializationSettings('@mipmap/ic_launcher');
     final DarwinInitializationSettings initializationSettingsDarwin =
         DarwinInitializationSettings(
-      onDidReceiveLocalNotification: (id, title, body, payload) =>null,
+      
     );
     final LinuxInitializationSettings initializationSettingsLinux =
         LinuxInitializationSettings(defaultActionName: 'Open notification');
@@ -31,10 +31,10 @@ class LocalNotifications {
             linux: initializationSettingsLinux);
 
     // request notification permissions 
-    _flutterLocalNotificationsPlugin
+   /*  _flutterLocalNotificationsPlugin
         .resolvePlatformSpecificImplementation<
             AndroidFlutterLocalNotificationsPlugin>()!.requestPermission();
-  
+   */
     
     _flutterLocalNotificationsPlugin.initialize(initializationSettings,
         onDidReceiveNotificationResponse: onNotificationTap,
